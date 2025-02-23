@@ -1,14 +1,13 @@
-import { BlogPosts } from "app/components/posts";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Page() {
+export default function works() {
   return (
-    <section>
-      <div className='grid gap-7 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
+    <>
+      <div className='grid grid-cols-3 gap-7'>
         <Link href='works/1' className='mb-10'>
           <Image
-            className='mb-3 transition delay-50 duration-300 ease-in-out hover:scale-105'
+            className='mb-3'
             src='/img01.png'
             height={700}
             width={400}
@@ -39,10 +38,6 @@ export default function Page() {
         <Image src='/img01.png' height={700} width={400} alt='work01' />
         <Image src='/img02.png' height={700} width={400} alt='work02' />
       </div>
-
-      <div className='my-8'>
-        <BlogPosts />
-      </div>
-    </section>
+    </>
   );
 }
