@@ -1,4 +1,3 @@
-import { BlogPosts } from "app/components/posts";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -38,10 +37,6 @@ export default function Page() {
         <Image src='/img02.png' height={700} width={400} alt='work02' />
         <Image src='/img01.png' height={700} width={400} alt='work01' />
         <Image src='/img02.png' height={700} width={400} alt='work02' />
-      </div>
-
-      <div className='my-8'>
-        <BlogPosts />
       </div>
     </section>
   );
