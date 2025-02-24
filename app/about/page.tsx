@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function about() {
   return (
-    <div className='flex'>
+    <div className='lg:flex'>
       <Image
         className='mr-10'
         src='/img01.png'

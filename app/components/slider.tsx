@@ -5,7 +5,7 @@ export default function VerticalSlider({ isReverse }: { isReverse: boolean }) {
   const images = ["/img01.png", "/img02.png"];
 
   return (
-    <div className='relative w-[400px] h-screen overflow-hidden'>
+    <div className='lg:w-[400px] h-screen overflow-hidden sm:hidden'>
       <div
         className={clsx("flex flex-col gap-4", {
           "animate-vertical-slide": !isReverse,

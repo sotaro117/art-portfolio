@@ -6,7 +6,7 @@ export default function works() {
 
   return (
     <>
-      <div className='grid grid-cols-3 gap-7'>
+      <div className='grid gap-7 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
         {images.map((image, idx) => (
           <div key={idx}>
             <Link href={`works/${idx}`} className='mb-10'>
