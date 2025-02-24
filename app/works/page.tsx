@@ -2,41 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function works() {
+  const images = ["/img01.png", "/img02.png"];
+
   return (
     <>
       <div className='grid grid-cols-3 gap-7'>
-        <Link href='works/1' className='mb-10'>
-          <Image
-            className='mb-3'
-            src='/img01.png'
-            height={700}
-            width={400}
-            alt='work01'
-          />
-          <p>title</p>
-          <p className='text-sm'>sub caption</p>
-        </Link>
-
-        <div className='mb-10'>
-          <Image
-            className='mb-3'
-            src='/img02.png'
-            height={700}
-            width={400}
-            alt='work02'
-          />
-          <p>title</p>
-          <p className='text-sm'>sub caption</p>
-        </div>
-
-        <Image src='/img01.png' height={700} width={400} alt='work01' />
-        <Image src='/img02.png' height={700} width={400} alt='work02' />
-        <Image src='/img01.png' height={700} width={400} alt='work01' />
-        <Image src='/img02.png' height={700} width={400} alt='work02' />
-        <Image src='/img01.png' height={700} width={400} alt='work01' />
-        <Image src='/img02.png' height={700} width={400} alt='work02' />
-        <Image src='/img01.png' height={700} width={400} alt='work01' />
-        <Image src='/img02.png' height={700} width={400} alt='work02' />
+        {images.map((image, idx) => (
+          <div key={idx}>
+            <Link href={`works/${idx}`} className='mb-10'>
+              <Image
+                className='mb-3'
+                src={image}
+                height={700}
+                width={400}
+                alt={`work${idx}`}
+              />
+            </Link>
+            <p>title</p>
+            <p className='text-sm'>sub caption</p>
+          </div>
+        ))}
       </div>
     </>
   );
