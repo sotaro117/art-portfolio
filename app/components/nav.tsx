@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { IgIcon } from "./icon";
+import { IgIcon } from "app/icons";
 
 const navItems = {
   "/contact": {

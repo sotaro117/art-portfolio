@@ -1,4 +1,4 @@
-import Logo from "app/components/icon";
+import { Logo } from "app/icons";
 import LoginForm from "app/components/admin/login-form";
 import { Suspense } from "react";
 

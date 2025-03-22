@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../icon";
+import { Logo } from "../../icons";
 import NavLinks from "../admin/nav-links";
 import { PowerIcon } from "@heroicons/react/24/outline";
 import { signOut } from "auth";

@@ -69,7 +69,7 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <link rel='icon' href='/app/icon.tsx' type='image/png' sizes='32x32' />
+      <link rel='icon' href='/app/favicon.tsx' type='image/png' sizes='32x32' />
       <body
         className={`${inconsolata.className} antialiased w-full mt-8 px-5 lg:mx-auto`}
       >
