@@ -1,16 +1,21 @@
+import { Metadata } from "next";
 import Image from "next/image";
 
-export default function about() {
+export const metadata: Metadata = {
+  title: "About",
+};
+
+export default function About() {
   return (
     <div className='lg:flex'>
       <Image
-        className='mr-10'
-        src='/img01.png'
-        height={700}
+        className='mr-10 rounded-full'
+        src='/user-img.jpg'
+        height={600}
         width={400}
         alt='work01'
       />
-      <div>
+      <div className='p-5'>
         <h2 className='mb-4 text-2xl'>Artist name or slogan idk</h2>
         <p>
           Dummy presentation: "Lorem ipsum dolor sit amet, consectetur

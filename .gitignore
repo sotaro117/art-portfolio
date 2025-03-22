@@ -35,3 +35,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Google cloud config file(permission)
+st-dev-439812-b17b148b5084.json
