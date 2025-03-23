@@ -11,8 +11,6 @@ import { baseUrl } from "app/sitemap";
 import { inconsolata } from "app/components/fonts";
 
 export const metadata: Metadata = {
-  // metadataBase: new URL(baseUrl),
-
   title: {
     default: "Art Portfolio",
     template: "%s | Art Portfolio",
