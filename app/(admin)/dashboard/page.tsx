@@ -5,12 +5,18 @@ import { BetaAnalyticsDataClient } from "@google-analytics/data";
 // needs to be created once, and can be reused for multiple requests.
 
 export default async function Dashboard() {
-  const data = await runReport();
+  let data;
+  if (
+    process.env.NODE_ENV !== "production" ||
+    process.env.NEXT_PHASE === "phase-production-build"
+  ) {
+    console.log("Skipping Google Analytics API calls during build");
+  } else {
+    data = await runReport();
+  }
 
   return (
-    <>
-      <Chart analytics={data} />
-    </>
+    <>{data === undefined ? <div>No data</div> : <Chart analytics={data} />}</>
   );
 }
 
@@ -29,15 +35,6 @@ export default async function Dashboard() {
 // };
 
 async function runReport() {
-  /*
-  const credentials = {
-    client_email: process.env.GC_CLIENT_EMAIL,
-    private_key: process.env.GC_PRIVATE_KEY,
-  };
-
-  const analyticsDataClient = new BetaAnalyticsDataClient(credentials);
-  */
-
   const analyticsDataClient = new BetaAnalyticsDataClient();
 
   const [response] = await analyticsDataClient.runReport({
